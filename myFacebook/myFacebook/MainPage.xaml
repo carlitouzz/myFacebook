@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:myFacebook"
+             x:Class="myFacebook.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <RelativeLayout BackgroundColor="#D5D8DD" >
+
+                <BoxView Color="#415F9D"  HeightRequest="50"
+                 x:Name="BlueBar" HorizontalOptions="Fill"
+                RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=1,
+                                         Constant=0}" />
+
+                <Label  Text="News Feed" TextColor="White" 
+                Font="22" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=1,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Height,
+                                        Factor=.02,
+                                        Constant=0}"/>
+
+                <Image Source="ic_search_white_48dp.png" 
+               HeightRequest="50" 
+               HorizontalOptions="Start"  
+               RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=5}"></Image>
+
+                <Image Source="menu.jpg" HeightRequest="50" 
+               HorizontalOptions="End" 
+               RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=1,
+                                        Constant=0}"/>
+
+                <BoxView Color="White"  HeightRequest="40"
+                 x:Name="FastMenu" HorizontalOptions="Fill"
+                RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=1,
+                                         Constant=0}"
+                 RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Y,
+                                        Factor=1,
+                                        Constant=55}"/>
+
+                <Image Source="ic_border_color_black_48dp.png" x:Name="Status"
+               Scale="0.75" Opacity=".5" HorizontalOptions="Start"               
+               RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=0.2, ElementName=FastMenu,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=FastMenu,
+                                        Constant=0}"/>
+
+                <Label  Text="Status" BackgroundColor="White" 
+                TextColor="Gray" Font="18" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=3.5, ElementName=Status,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1.1, ElementName=Status,
+                                        Constant=0}"/>
+
+                <Image Source="ic_photo_camera_black_48dp.png" x:Name="Photo"
+               Scale="0.75" Opacity=".5" HorizontalOptions="Center"
+               RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=1, ElementName=FastMenu,
+                                        Constant=-50}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=FastMenu,
+                                        Constant=0}"/>
+
+                <Label  Text="Photo" BackgroundColor="White" 
+                TextColor="Gray" Font="18" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=1, ElementName=FastMenu,
+                                        Constant=30}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1.1, ElementName=Photo,
+                                        Constant=0}"/>
+
+                <Image Source="ic_location_on_black_48dp.png" x:Name="Check"
+               Scale="0.75" Opacity=".5" HorizontalOptions="End"
+               RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=1, ElementName=FastMenu,
+                                        Constant=-75}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=FastMenu,
+                                        Constant=0}"/>
+
+                <Label  Text="Check In" BackgroundColor="White" 
+                TextColor="Gray" Font="18" HorizontalOptions="End"
+                RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=.98, ElementName=FastMenu,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1.1, ElementName=FastMenu,
+                                        Constant=0}"/>
+
+                <BoxView Color="White" HeightRequest="350"
+                 HorizontalOptions="Fill" x:Name="Content"
+                  RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=.95, 
+                                         Constant=0}"
+                  RelativeLayout.XConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=.025,
+                                         Constant=0}"
+                  RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Y,
+                                        Factor=1,
+                                        Constant=108}"/>
+
+                <Label  Text="Suggested Item" 
+                TextColor="Gray" 
+                Font="15"   
+                Opacity=".7"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=20}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=110}"/>
+
+                <Image Source="j.png" 
+               Scale="1.5" x:Name="j"
+               RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=25}"
+               RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=145}"/>
+
+                <Label  Text="J. Somerfields"
+                TextColor="#151515" Font="18" 
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=60}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=135}"/>
+
+                <Label  Text="Sponsored" Opacity=".55"
+                TextColor="Gray" Font="12" 
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=60}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=160}"/>
+
+                <Label  Text="With the J. Somerfields App, the latest looks are always at your fingertips." 
+                Font="15"   
+                TextColor="Black"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=20}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=185}"/>
+
+                <Image Source="Somerfields.png" 
+               Scale="1.62" HorizontalOptions="CenterAndExpand"
+               RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Width,
+                                        Factor=.8, ElementName=Content,
+                                        Constant=0}"
+               RelativeLayout.XConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=.1, ElementName=Content,
+                                         Constant=0}"
+               RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=Content,
+                                        Constant=150}"/>
+
+                <Label  Text="J. Somerfields"
+                TextColor="Black" Font="20" 
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=20}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=400}"/>
+
+                <Label  Text="Open in App" TextColor="Gray" 
+                Font="15"  Opacity=".7"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=20}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=425}"/>
+
+                <Button Text="Shop Now" TextColor="Gray" Font="16"
+                BackgroundColor="White" BorderColor="Gray" BorderWidth="1"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=.675,
+                                         Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=400}"/>
+
+                <BoxView Color="White" HeightRequest="50"
+                 HorizontalOptions="Fill" x:Name="Extra"
+                  RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=.95, 
+                                         Constant=0}"
+                  RelativeLayout.XConstraint=
+                 "{ConstraintExpression  Type=RelativeToParent,
+                                         Property=Width,
+                                         Factor=.025,
+                                         Constant=0}"
+                  RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Height,
+                                        Factor=.825,
+                                        Constant=0}"/>
+
+                <Label Text="Nicole Gregory commented on this"
+                       Font="16" TextColor="Black"
+                       RelativeLayout.YConstraint=
+                       "{ConstraintExpression Type=RelativeToView,
+                                              Property=Y,
+                                              Factor=1.01, ElementName=Extra,
+                                              Constant=0}"
+                       RelativeLayout.XConstraint=
+                       "{ConstraintExpression Type=RelativeToView,
+                                              Property=X,
+                                              Factor=2, ElementName=Extra,
+                                              Constant=0}"/>  
+
+                <BoxView Color="White" HorizontalOptions="FillAndExpand" 
+                 x:Name="BottomMenu"
+                 RelativeLayout.WidthConstraint=
+                    "{ConstraintExpression Type=RelativeToParent, 
+                                Property=Width, Factor=1}"
+                RelativeLayout.YConstraint=
+                    "{ConstraintExpression Type=RelativeToParent, 
+                                Property=Height, Factor=0.9}"
+                RelativeLayout.HeightConstraint=
+                    "{ConstraintExpression Type=RelativeToParent, 
+                                Property=Height, Factor=0.1}"/>
+
+                <Image Source="news.png" x:Name="News" Scale=".9"
+            Opacity=".5" HorizontalOptions="Start"               
+            RelativeLayout.XConstraint=
+                "{ConstraintExpression Type=RelativeToView,
+                                    Property=Width,
+                                    Factor=0.05, ElementName=BottomMenu,
+                                    Constant=0}"
+            RelativeLayout.YConstraint=
+                "{ConstraintExpression Type=RelativeToView,
+                                    Property=Y,
+                                    Factor=1, ElementName=BottomMenu,
+                                    Constant=5}"/>
+
+                <Image Source="request.png" x:Name="Request" Scale=".9"
+                Opacity=".5" HorizontalOptions="Start"               
+                RelativeLayout.XConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                Property=Width,
+                                Factor=0.25, ElementName=BottomMenu,
+                                Constant=0}"
+                RelativeLayout.YConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                Property=Y,
+                                Factor=1, ElementName=BottomMenu,
+                                Constant=5}"/>
+
+                <Image Source="message.png" x:Name="Message" Scale=".9"
+                Opacity=".5" HorizontalOptions="Center"               
+                RelativeLayout.XConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                    Property=Width,
+                                    Factor=0.455, ElementName=BottomMenu,
+                                    Constant=0}"
+                RelativeLayout.YConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                    Property=Y,
+                                    Factor=1, ElementName=BottomMenu,
+                                    Constant=5}"/>
+
+                <Image Source="world.png" x:Name="World" Scale=".9"
+                Opacity=".5" HorizontalOptions="Start"               
+                RelativeLayout.XConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                    Property=Width,
+                                    Factor=0.655, ElementName=BottomMenu,
+                                    Constant=0}"
+                RelativeLayout.YConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                    Property=Y,
+                                    Factor=1, ElementName=BottomMenu,
+                                    Constant=5}"/>
+
+                <Image Source="ic_menu_black_48dp.png" x:Name="Menu"
+                Opacity=".5" HorizontalOptions="Start"               
+                RelativeLayout.XConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                    Property=Width,
+                                    Factor=0.83, ElementName=BottomMenu,
+                                    Constant=0}"
+                RelativeLayout.YConstraint=
+                    "{ConstraintExpression Type=RelativeToView,
+                                    Property=Y,
+                                    Factor=1, ElementName=BottomMenu,
+                                    Constant=3}"/>
+
+                <Label  Text="News Feed"  
+                TextColor="Gray" Font="12" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=.025, ElementName=BottomMenu,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=BottomMenu,
+                                        Constant=30}"/>
+
+                <Label  Text="Requests"  
+                TextColor="Gray" Font="12" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=.235, ElementName=BottomMenu,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=BottomMenu,
+                                        Constant=30}"/>
+
+                <Label  Text="Messages"  
+                TextColor="Gray" Font="12" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=.435, ElementName=BottomMenu,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=BottomMenu,
+                                        Constant=30}"/>
+
+                <Label  Text="Notifications"  
+                TextColor="Gray" Font="12" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=.625, ElementName=BottomMenu,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=BottomMenu,
+                                        Constant=30}"/>
+
+                <Label  Text="More"  
+                TextColor="Gray" Font="12" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Width,
+                                        Factor=.835, ElementName=BottomMenu,
+                                        Constant=0}"
+                RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y,
+                                        Factor=1, ElementName=BottomMenu,
+                                        Constant=30}"/>
+
+            </RelativeLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
+    
+    
